@@ -15,9 +15,18 @@ namespace Factorial_Recursion
 
             Console.Write(" Please Input any positive number: ");
             int n1 = Convert.ToInt32(Console.ReadLine());
-            long fact = FactorialCalcu(n1);
-            Console.WriteLine(" The factorial of {0} is : {1} ", n1, fact);
-            Console.ReadKey();
+            if (n1 < 0)
+            {
+                Console.WriteLine("CANT DO IT NEGATIVE");
+            }
+            else
+            {
+
+                long fact = FactorialCalcu(n1);
+                Console.WriteLine(" The factorial of {0} is : {1} ", n1, fact);
+            }
+                Console.ReadKey();
+            
         }
 
         private static long FactorialCalcu(int n1)
